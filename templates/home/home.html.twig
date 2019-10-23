@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Agence Aurel'Immo{% endblock %}
+
+{% block  body %}
+    <div class="jumbotron text-center">
+        <h1>Agence Aurel'Immo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sem tortor, 
+        facilisis ac erat id, eleifend fermentum augue.</p>
+    </div>
+    <div class="container">
+        <h2>Les derniers biens</h2>
+        <div class="row flex">
+            {% for property in properties %}
+                <div class="col-3">
+                    {% include "property/_property.html.twig" %}
+                </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
